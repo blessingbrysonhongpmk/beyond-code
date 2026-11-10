@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-navy:   #183451;
+    --secondary-blue: #416B96;
+    --light-blue:     #EDF4FA;
+    --bg-white:       #FFFFFF;
+    --main-text:      #273444;
+    --secondary-text: #687789;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--main-text);
+    background-color: var(--bg-white);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: var(--primary-navy);
+    font-feature-settings: "pnum" 1, "onum" 1;
+  }
+
+  ::selection {
+    background: #EDF4FA;
+    color: #183451;
+  }
+}
+
+/* ─── Academic Timeline Connecting Line ─── */
+@layer utilities {
+  .academic-timeline-line {
+    background-color: #E2E8F0;
+  }
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
